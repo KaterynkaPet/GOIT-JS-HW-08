@@ -71,9 +71,9 @@ const marupGallery = images.map((image) =>
     <img class="gallery-image"
         src="${image.preview}"
         data-source="${image.original}"
-        alt="${image.description}" width="360"></img>
+        alt="${image.description}" width="360" />
     </a>
-</li>`)
+    </li>`)
     .join("");
 list.insertAdjacentHTML("beforeend", marupGallery);
 
@@ -85,7 +85,7 @@ function handleLinkClick(event) {
 
     const instance = basicLightbox.create(
         `<img src="${event.target.dataset.source}" width="800" height="600"
-        alt="${event.target.alt}">`
+        alt="${event.target.alt}" />`
     );
 
     instance.show();
